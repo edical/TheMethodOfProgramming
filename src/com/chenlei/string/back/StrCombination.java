@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * 1.3.2
  * @author chenlei
- * @create 2016 - 09 - 04 21:00
+ * @since 2016 - 09 - 04 21:00
  */
 public class StrCombination {
 
@@ -24,7 +24,7 @@ public class StrCombination {
 
     private static void combinationByBit(char a[]) {
         int times = 1;
-        for(int i = 0; i < a.length; i++) {
+        for (char ignored : a) {
             times *= 2;
         }
         for(int printTemplate = 1; printTemplate < times; printTemplate++) {
@@ -35,7 +35,7 @@ public class StrCombination {
     private static void printCombination(char a[], int printTemplate) {
         for(int i = 0; i < a.length; i++) {
             if((printTemplate & (1 << i)) != 0) {
-               System.out.print(a[i]);
+               System.out.print(a[a.length - i - 1]);
             }
         }
         System.out.println();
