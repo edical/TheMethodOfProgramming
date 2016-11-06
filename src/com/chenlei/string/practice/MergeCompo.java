@@ -1,51 +1,54 @@
 package com.chenlei.string.practice;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  *  9 并查集
  * @author chenlei
- * @create 2016 - 10 - 26 20:05
+ * @since  2016 - 10 - 26 20:05
  */
 public class MergeCompo {
 
 
     private static void printMerge(String[]... arrays) {
-        Map<String, Integer> map = new HashMap<>();
-        int temp = 1;
+        Map<String, String> map = new HashMap<>();
         for(String[] list : arrays) {
             for(String s : list) {
-                if(!map.containsKey(s)) {
-                    map.put(s,temp++);
-                }
+                map.put(s,s);
             }
         }
         for(String[] list : arrays) {
-            Integer targetGroup = map.get(list[0]);
+            String targetGroup = find(map, list[0]);
             for(int i = 1; i < list.length; i++) {
-                Integer middleGroup = map.get(list[i]);
-                if(middleGroup != targetGroup) {
-                    for (Map.Entry<String, Integer> entry : map.entrySet()) {
-                        if (entry.getValue() == middleGroup) {
-                            map.put(entry.getKey(),targetGroup);
-                        }
-                    }
+                String middleGroup = find(map, list[i]);
+                if(!Objects.equals(targetGroup, middleGroup)) {
+                    merge(map, targetGroup, middleGroup);
                 }
             }
         }
-//        System.out.println(map);
-        Map<Integer,List<String>> map1 = new HashMap<>();
-        for(Map.Entry<String,Integer> entry : map.entrySet()) {
-            Integer i = entry.getValue();
+
+        Map<String,List<String>> map1 = new HashMap<>();
+        for(Map.Entry<String,String> entry : map.entrySet()) {
+            String i = entry.getValue();
             if(!map1.containsKey(i)) {
                 map1.put(i,new ArrayList<>());
             }
             map1.get(i).add(entry.getKey());
         }
         System.out.println(map1);
+    }
+
+    //求key所在的组号
+    private static String find(Map<String, String> map, String key) {
+        while(!Objects.equals(key, map.get(key))) {
+            map.put(key, map.get(map.get(key)));
+            key = map.get(key);
+        }
+        return key;
+    }
+
+    private static void merge(Map<String, String> map, String targetGroup, String middleGroup) {
+        map.put(middleGroup, targetGroup);
     }
 
     public static void main(String[] args) {

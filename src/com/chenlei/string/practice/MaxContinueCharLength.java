@@ -1,9 +1,9 @@
 package com.chenlei.string.practice;
 
 /**
- * 12
+ * 12 最长连续字符递归写法
  * @author chenlei
- * @create 2016 - 10 - 23 10:25
+ * @since  2016 - 10 - 23 10:25
  */
 public class MaxContinueCharLength {
 
@@ -11,7 +11,7 @@ public class MaxContinueCharLength {
         if(index < 0 || index >= str.length()) {
             return 0;
         }
-        int before = index, after = index+1;
+        int after = index+1;
         while(after < str.length()) {
             if(str.charAt(after - 1) == str.charAt(after)) {
                 after++;
@@ -20,10 +20,10 @@ public class MaxContinueCharLength {
             }
         }
         if(after >= str.length()) {
-            return after - before;
+            return after - index;
         } else {
             int otherMaxLength = maxContinueCharLength(str, after);
-            return (after - before) > otherMaxLength ? (after - before) : otherMaxLength;
+            return (after - index) > otherMaxLength ? (after - index) : otherMaxLength;
         }
     }
 
