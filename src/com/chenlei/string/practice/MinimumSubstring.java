@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 11最长字串
+ * 11 最小覆盖子串
  * @author chenlei
  * @since 2016 - 11 - 06 11:16
  */
