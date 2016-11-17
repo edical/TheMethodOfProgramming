@@ -1,6 +1,6 @@
 package com.chenlei.array;
 
-import com.chenlei.util.SortUtils;
+import com.chenlei.sort.QuickSort;
 
 /**
  * 2.1
@@ -10,7 +10,7 @@ import com.chenlei.util.SortUtils;
 public class FindTheKMIN {
 
     public static int findK(int a[], int low, int high, int k) {
-        int index = SortUtils.partition(a, low, high);
+        int index = QuickSort.partition(a, low, high);
         if(k == (index - low + 1)) {
             return a[index];
         }

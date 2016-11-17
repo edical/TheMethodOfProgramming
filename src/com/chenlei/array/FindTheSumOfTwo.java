@@ -1,6 +1,6 @@
 package com.chenlei.array;
 
-import com.chenlei.util.SortUtils;
+import com.chenlei.sort.QuickSort;
 
 /**
  * @author chenlei
@@ -9,15 +9,15 @@ import com.chenlei.util.SortUtils;
 public class FindTheSumOfTwo {
 
     public static void findTheSumOfTwo(int a[], int sum) {
-        SortUtils.quickSort(a, 0, a.length - 1);
+        QuickSort.quickSort(a, 0, a.length - 1);
         int low = 0, high = a.length - 1;
-        while(low < high) {
+        while (low < high) {
             int currentSum = a[low] + a[high];
-            if(currentSum == sum) {
+            if (currentSum == sum) {
                 System.out.println(a[low] + "+" + a[high] + "=" + sum);
                 break;
             }
-            if(currentSum > sum) {
+            if (currentSum > sum) {
                 high--;
             } else {
                 low++;
@@ -26,7 +26,7 @@ public class FindTheSumOfTwo {
     }
 
     public static void main(String[] args) {
-        int a[] = {1,2,3,5,6,8,9};
+        int a[] = {1, 2, 3, 5, 6, 8, 9};
         findTheSumOfTwo(a, 6);
     }
 }

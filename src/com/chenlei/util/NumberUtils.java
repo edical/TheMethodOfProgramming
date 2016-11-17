@@ -27,6 +27,12 @@ public class NumberUtils {
         }
     }
 
+    public static void printInArray(int []array) {
+        for(int i : array) {
+            System.out.print(i + " ");
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(min(3,5));
     }
