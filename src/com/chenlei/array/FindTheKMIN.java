@@ -3,9 +3,9 @@ package com.chenlei.array;
 import com.chenlei.sort.QuickSort;
 
 /**
- * 2.1
+ * 2.1 寻找最小的k个数
  * @author chenlei
- * @create 2016 - 09 - 11 17:30
+ * @since 2016 - 09 - 11 17:30
  */
 public class FindTheKMIN {
 
