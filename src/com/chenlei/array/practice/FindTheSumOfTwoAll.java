@@ -1,22 +1,25 @@
-package com.chenlei.array;
+package com.chenlei.array.practice;
 
 import com.chenlei.sort.QuickSort;
 
 /**
- *  寻找和为定值的两个数
+ * 找到所有满足和为定值的整数对
+ *
  * @author chenlei
- * @since  2016 - 09 - 11 20:16
+ * @since 2016 - 11 - 19 11:58
  */
-public class FindTheSumOfTwo {
+public class FindTheSumOfTwoAll {
 
-    public static void findTheSumOfTwo(int a[], int sum) {
+    public static void findTheSumOfTwoAll(int a[], int sum) {
         QuickSort.quickSort(a, 0, a.length - 1);
         int low = 0, high = a.length - 1;
         while (low < high) {
             int currentSum = a[low] + a[high];
             if (currentSum == sum) {
                 System.out.println(a[low] + "+" + a[high] + "=" + sum);
-                break;
+                low++;
+                high--;
+                continue;
             }
             if (currentSum > sum) {
                 high--;
@@ -27,8 +30,7 @@ public class FindTheSumOfTwo {
     }
 
     public static void main(String[] args) {
-//        int a[] = {1, 2, 3, 5, 6, 8, 9};
-        int a[] = {3, 8, 1, 5, 9, 2, 6};
-        findTheSumOfTwo(a, 6);
+        int a[] = {3, 4, 1, 5, 9, 2, 6};
+        findTheSumOfTwoAll(a, 6);
     }
 }
