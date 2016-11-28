@@ -3,9 +3,9 @@ package com.chenlei.string;
 import com.chenlei.util.StringUtils;
 
 /**
- * 1.5
+ * 1.5 回文判断
  * @author chenlei
- * @create 2016 - 09 - 06 21:30
+ * @since  2016 - 09 - 06 21:30
  */
 public class Palindrome {
 

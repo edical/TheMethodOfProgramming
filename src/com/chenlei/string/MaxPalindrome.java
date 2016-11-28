@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *  最长回文子串
  * @author chenlei
- * @create 2016 - 09 - 07 20:02
+ * @since  2016 - 09 - 07 20:02
  */
 public class MaxPalindrome {
 

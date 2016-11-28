@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  寻找树中和为定值的所有路径
+ *  2.2.1 寻找树中和为定值的所有路径
  * @author chenlei
  * @since 2016 - 11 - 19 12:08
  */

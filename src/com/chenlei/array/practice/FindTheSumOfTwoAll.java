@@ -3,7 +3,7 @@ package com.chenlei.array.practice;
 import com.chenlei.sort.QuickSort;
 
 /**
- * 找到所有满足和为定值的整数对
+ * 2.2.2 找到所有满足和为定值的整数对
  *
  * @author chenlei
  * @since 2016 - 11 - 19 11:58

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- *  最大连续子数组的和
+ *  2.4 最大连续子数组的和
  * @author chenlei
  * @since 2016 - 11 - 21 20:01
  */

@@ -3,7 +3,7 @@ package com.chenlei.array;
 import com.chenlei.sort.QuickSort;
 
 /**
- *  寻找和为定值的两个数
+ *  2.2 寻找和为定值的两个数
  * @author chenlei
  * @since  2016 - 09 - 11 20:16
  */

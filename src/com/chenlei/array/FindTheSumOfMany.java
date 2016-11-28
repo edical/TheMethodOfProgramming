@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  寻找和为定值的多个数
+ *  2.3 寻找和为定值的多个数
  * @author chenlei
  * @since 2016 - 11 - 20 9:27
  */
@@ -39,8 +39,10 @@ public class FindTheSumOfMany {
             findTheSumOfManyByCut(target, i - 1, nowValue + i, list);
             list.remove(list.size() - 1);
         }
-        findTheSumOfManyByCut(target, i - 1, nowValue, list);
 
+        if((1+i-1)*(i-1) / 2 >= target - nowValue) {
+            findTheSumOfManyByCut(target, i - 1, nowValue, list);
+        }
     }
 
 
