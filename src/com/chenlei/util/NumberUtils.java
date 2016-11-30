@@ -31,6 +31,7 @@ public class NumberUtils {
         for(int i : array) {
             System.out.print(i + " ");
         }
+        System.out.println();
     }
 
     public static boolean isOdd(int val) {
