@@ -34,6 +34,12 @@ public class NumberUtils {
         System.out.println();
     }
 
+    public static void printInMatrix(int [][]matrix) {
+        for (int[] aMatrix : matrix) {
+            printInArray(aMatrix);
+        }
+    }
+
     public static boolean isOdd(int val) {
         return val % 2 != 0;
     }
