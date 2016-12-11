@@ -1,4 +1,4 @@
-package com.chenlei.array.practice;
+package com.chenlei.array.back;
 
 import com.chenlei.sort.QuickSort;
 
