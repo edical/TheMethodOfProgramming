@@ -3,15 +3,15 @@ package com.chenlei.string.back;
 import com.chenlei.util.StringUtils;
 
 /**
- *  1.1
+ *  1.1 单词反转
  * @author chenlei
- * @create 2016 - 09 - 04 11:42
+ * @since  2016 - 09 - 04 11:42
  */
 public class ReverseWord {
     private static String reverseWord(String string) {
         char[] chars = string.toCharArray();
         StringUtils.reverseCharArray(chars, 0, chars.length - 1);
-        int first = 0, second = 0;
+        int first = 0, second;
         do{
             //firstIndex指向第一个不等于空的字符
             while(first < chars.length && chars[first] == ' ') first++;

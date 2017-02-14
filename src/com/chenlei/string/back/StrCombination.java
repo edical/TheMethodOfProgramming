@@ -3,7 +3,7 @@ package com.chenlei.string.back;
 import java.util.ArrayList;
 
 /**
- * 1.3.2
+ * 1.3.2 字符的所有组合
  * @author chenlei
  * @since 2016 - 09 - 04 21:00
  */

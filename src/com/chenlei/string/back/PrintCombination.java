@@ -3,13 +3,13 @@ package com.chenlei.string.back;
 import java.util.ArrayList;
 
 /**
- *  1.3.3
+ *  1.3.3 序列的打印
  * @author chenlei
- * @create 2016 - 10 - 23 21:15
+ * @since  2016 - 10 - 23 21:15
  */
 public class PrintCombination {
 
-    public static void printCombination(char a[], ArrayList<Character> list, int index, int leftPositions) {
+    private static void printCombination(char a[], ArrayList<Character> list, int index, int leftPositions) {
         if(leftPositions == 0) {
             System.out.println(list);
             return;
@@ -24,7 +24,7 @@ public class PrintCombination {
     }
 
     //不用return的写法
-    public static void printCombination2(char a[], ArrayList<Character> list, int index, int leftPositions) {
+    private static void printCombination2(char a[], ArrayList<Character> list, int index, int leftPositions) {
         list.add(a[index]);
         if(leftPositions - 1 == 0) {
             System.out.println(list);
@@ -36,7 +36,6 @@ public class PrintCombination {
             printCombination(a, list, index + 1, leftPositions);
         }
     }
-
 
     public static void main(String[] args) {
         char a[] = {'a', 'b', 'c'};

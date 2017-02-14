@@ -1,8 +1,8 @@
 package com.chenlei.string;
 
-/** 1.2
+/** 1.2 字符串包含
  * @author chenlei
- * @create 2016 - 09 - 04 15:22
+ * @since  2016 - 09 - 04 15:22
  */
 public class StringContain {
 
@@ -12,7 +12,7 @@ public class StringContain {
             array[c - 'A'] = true;
         }
         for(char c : b.toCharArray()) {
-            if(array[c - 'A'] == false) {
+            if(!array[c - 'A']) {
                 return false;
             }
         }

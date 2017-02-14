@@ -1,8 +1,8 @@
 package com.chenlei.string.back;
 
-/** 1.2
+/** 1.2 变位词
  * @author chenlei
- * @create 2016 - 09 - 04 16:01
+ * @since  2016 - 09 - 04 16:01
  */
 public class BrotherWord {
 

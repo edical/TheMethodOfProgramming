@@ -3,10 +3,9 @@ package com.chenlei.string;
 import com.chenlei.util.StringUtils;
 
 /**
- * 1.1
- *
+ * 1.1 字符串的旋转
  * @author chenlei
- * @create 2016 - 09 - 04 10:31
+ * @since  2016 - 09 - 04 10:31
  */
 public class RotateString {
 
@@ -14,7 +13,7 @@ public class RotateString {
         if(StringUtils.isBlank(obj) || n == null || n <= 0) {
             return "";
         }
-        StringBuffer buffer = new StringBuffer(obj);
+        StringBuilder buffer = new StringBuilder(obj);
         for(int i = 0; i < n; i++) {
             char temp = buffer.charAt(0);
             for(int j = 0; j < buffer.length() - 1; j++) {
