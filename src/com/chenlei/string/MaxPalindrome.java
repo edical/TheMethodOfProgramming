@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  最长回文子串
+ *  1.6 最长回文子串
  * @author chenlei
  * @since  2016 - 09 - 07 20:02
  */
@@ -51,7 +51,7 @@ public class MaxPalindrome {
         return length;
     }
 
-    public static int buildManacher(String str, List<Integer> values) {
+    public static void buildManacher(String str, List<Integer> values) {
         int mx = 0;
         int id = 0;
         int value;
@@ -73,10 +73,9 @@ public class MaxPalindrome {
             }
             values.add(value);
         }
-        return 0;
     }
 
-    public static int manacher(String str) {
+    private static int manacher(String str) {
         if(StringUtils.isBlank(str)) {
             return 0;
         }
@@ -92,7 +91,7 @@ public class MaxPalindrome {
     }
 
     public static String buildStr(String str) {
-        StringBuffer buffer = new StringBuffer(str);
+        StringBuilder buffer = new StringBuilder(str);
         int i = 0;
         while(i != buffer.length()) {
             buffer.insert(i, '#');

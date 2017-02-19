@@ -2,7 +2,7 @@ package com.chenlei.util;
 
 /**
  * @author chenlei
- * @create 2016 - 09 - 04 10:55
+ * @since  2016 - 09 - 04 10:55
  */
 public class StringUtils {
     public static boolean isBlank(String string) {
