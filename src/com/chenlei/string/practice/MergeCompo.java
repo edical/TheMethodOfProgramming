@@ -27,6 +27,8 @@ public class MergeCompo {
             }
         }
 
+        compress(map);
+
         Map<String,List<String>> map1 = new HashMap<>();
         for(Map.Entry<String,String> entry : map.entrySet()) {
             String i = entry.getValue();
@@ -47,17 +49,28 @@ public class MergeCompo {
         return key;
     }
 
+    private static void compress(Map<String, String> map) {
+        for(Map.Entry<String,String> entry : map.entrySet()) {
+            String key = entry.getKey();
+            find(map, key);
+        }
+    }
+
     private static void merge(Map<String, String> map, String targetGroup, String middleGroup) {
         map.put(middleGroup, targetGroup);
     }
 
     public static void main(String[] args) {
+//        String[] list1 = {"aaa","bbb","ccc"};
+//        String[] list2 = {"bbb","ddd"};
+//        String[] list3 = {"eee","fff"};
+//        String[] list4 = {"ggg"};
+//        String[] list5 = {"ddd","hhh"};
         String[] list1 = {"aaa","bbb","ccc"};
-        String[] list2 = {"bbb","ddd"};
-        String[] list3 = {"eee","fff"};
+        String[] list2 = {"ddd","eee"};
+        String[] list3 = {"bbb","ddd"};
         String[] list4 = {"ggg"};
-        String[] list5 = {"ddd","hhh"};
-        printMerge(list1,list2,list3,list4,list5);
+        printMerge(list1,list2,list3,list4);
     }
 
 }
