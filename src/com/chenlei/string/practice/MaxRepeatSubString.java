@@ -63,59 +63,11 @@ public class MaxRepeatSubString {
         return length;
     }
 
-    private static void resolveByKmp(String str) {
-        StringBuilder buffer = new StringBuilder(str);
-        List<String> suffixs = new ArrayList<>();
-        for (int i = 0; i < buffer.length(); i++) {
-            suffixs.add(buffer.substring(i, buffer.length()));
-        }
-        int maxRepeatLength = -1;
-        int index = 0;
-        for(int i = 0; i < suffixs.size(); i++) {
-            int maxNextValue = maxNext(suffixs.get(i));
-            if(maxNextValue > maxRepeatLength) {
-                maxRepeatLength = maxNextValue;
-                index = i;
-            }
-        }
-        System.out.println(suffixs.get(index).substring(0,maxRepeatLength));
-    }
 
-    private static int maxNext(String str) {
-        List<Integer> nexts = new ArrayList<>();
-        nexts.add(0);
-        int k = 0;
-        int index = 1;
-        int maxNext = 0;
-        boolean interrupt = false;
-
-        while(index < str.length()) {
-            if(str.charAt(k) == str.charAt(index)) {
-                if( !interrupt ) {
-                    nexts.add(nexts.get(nexts.size() - 1) + 1);
-                } else {
-                    nexts.add(k + 1);
-                    interrupt = false;
-                }
-                k++;
-                index++;
-                if(nexts.get(nexts.size() - 1) > maxNext) {
-                    maxNext = nexts.get(nexts.size() - 1);
-                }
-            } else if(k == 0) {
-                index++;
-                nexts.add(0);
-            }else {
-                k = nexts.get(k);
-                interrupt = true;
-            }
-        }
-        return maxNext;
-    }
 
     public static void main(String[] args) {
         basic("canffcancd");
         resolveBySuffix("canffcancd");
-        resolveByKmp("canffcancd");
+        //动态规划，与maxCommonSubString相似
     }
 }
