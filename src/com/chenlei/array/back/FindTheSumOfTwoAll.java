@@ -10,7 +10,7 @@ import com.chenlei.sort.QuickSort;
  */
 public class FindTheSumOfTwoAll {
 
-    public static void findTheSumOfTwoAll(int a[], int sum) {
+    private static void findTheSumOfTwoAll(int a[], int sum) {
         QuickSort.quickSort(a, 0, a.length - 1);
         int low = 0, high = a.length - 1;
         while (low < high) {

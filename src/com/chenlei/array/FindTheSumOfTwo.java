@@ -9,7 +9,7 @@ import com.chenlei.sort.QuickSort;
  */
 public class FindTheSumOfTwo {
 
-    public static void findTheSumOfTwo(int a[], int sum) {
+    private static void findTheSumOfTwo(int a[], int sum) {
         QuickSort.quickSort(a, 0, a.length - 1);
         int low = 0, high = a.length - 1;
         while (low < high) {

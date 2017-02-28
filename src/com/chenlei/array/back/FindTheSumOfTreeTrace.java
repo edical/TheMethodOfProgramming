@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class FindTheSumOfTreeTrace {
 
-    public static void findTheTrace(Tree t, List<Tree> trace, int nowValue, int target) {
+    private static void findTheTrace(Tree t, List<Tree> trace, int nowValue, int target) {
         if(t == null) {
             return;
         }
@@ -41,7 +41,7 @@ public class FindTheSumOfTreeTrace {
         findTheTrace(tree, new ArrayList<>(), 0, 22);
     }
 
-    public static void printTrace(List<Tree> trace) {
+    private static void printTrace(List<Tree> trace) {
         if(trace != null) {
             for(Tree tree : trace) {
                 System.out.print(tree.value + " ");
@@ -54,9 +54,9 @@ public class FindTheSumOfTreeTrace {
         Tree(Integer value) {
             this.value = value;
         }
-        public Integer value;
-        public Tree leftChild;
-        public Tree rightChild;
+        Integer value;
+        Tree leftChild;
+        Tree rightChild;
     }
 
 }

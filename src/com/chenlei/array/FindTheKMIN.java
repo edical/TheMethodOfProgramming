@@ -9,7 +9,7 @@ import com.chenlei.sort.QuickSort;
  */
 public class FindTheKMIN {
 
-    public static int findK(int a[], int low, int high, int k) {
+    private static int findK(int a[], int low, int high, int k) {
         int index = QuickSort.partition(a, low, high);
         if(k == (index - low + 1)) {
             return a[index];
@@ -21,7 +21,7 @@ public class FindTheKMIN {
         }
     }
 
-    public static int findK(int a[], int k) {
+    private static int findK(int a[], int k) {
         return findK(a, 0, a.length - 1, k);
     }
 
