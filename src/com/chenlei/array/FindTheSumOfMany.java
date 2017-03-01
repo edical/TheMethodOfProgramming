@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class FindTheSumOfMany {
 
-    public static void findTheSumOfMany(int n, int target, int i, List<Integer> list) {
+    private static void findTheSumOfMany(int n, int target, int i, List<Integer> list) {
         if(i > n) {
             int sum = 0;
             for(Integer j : list)
@@ -26,7 +26,7 @@ public class FindTheSumOfMany {
         findTheSumOfMany(n ,target, i + 1, list);
     }
 
-    public static void findTheSumOfManyByCut(int target, int i, int nowValue, List<Integer> list) {
+    private static void findTheSumOfManyByCut(int target, int i, int nowValue, List<Integer> list) {
         if(nowValue == target) {
             System.out.println(list);
             return;

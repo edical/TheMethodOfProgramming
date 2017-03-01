@@ -34,6 +34,14 @@ public class NumberUtils {
         System.out.println();
     }
 
+    public static int sum(int []array) {
+        int sum = 0;
+        for(int i : array) {
+            sum += i;
+        }
+        return sum;
+    }
+
     public static void printInMatrix(int [][]matrix) {
         for (int[] aMatrix : matrix) {
             printInArray(aMatrix);
