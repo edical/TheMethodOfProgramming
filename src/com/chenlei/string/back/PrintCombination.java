@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class PrintCombination {
 
+    //包含组合去重
     private static void printCombination(char a[], ArrayList<Character> list, int index, int leftPositions) {
         if(leftPositions == 0) {
             System.out.println(list);
@@ -20,6 +21,9 @@ public class PrintCombination {
         list.add(a[index]);
         printCombination(a,list,index+1,leftPositions - 1);
         list.remove(list.size() - 1);
+        while((index + 1) <a.length && a[index] ==a[index + 1]) {
+            index++;
+        }
         printCombination(a,list,index+1,leftPositions);
     }
 
@@ -38,10 +42,10 @@ public class PrintCombination {
     }
 
     public static void main(String[] args) {
-        char a[] = {'a', 'b', 'c'};
+        char a[] = {'a', 'b', 'c' };
         ArrayList<Character> list = new ArrayList<>();
         for(int i = 1; i <= a.length; i++) {
-            printCombination2(a, list, 0, i);
+            printCombination(a, list, 0, i);
         }
     }
 }
