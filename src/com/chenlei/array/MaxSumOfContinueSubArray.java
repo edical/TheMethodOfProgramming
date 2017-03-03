@@ -1,9 +1,5 @@
 package com.chenlei.array;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 /**
  *  2.4 最大连续子数组的和
  * @author chenlei
@@ -11,18 +7,21 @@ import java.util.Optional;
  */
 public class MaxSumOfContinueSubArray {
 
-    public static Integer maxSum(int array[]) {
-        List<Integer> list = new ArrayList<>();
-        list.add(array[0]);
+    private static Integer maxSum(int array[]) {
+        Integer lastSum = array[0];
+        Integer maxSum = array[0];
+
         for(int i = 1; i < array.length; i++) {
-            if(list.get(i-1) <= 0) {
-                list.add(array[i]);
+            if(lastSum > 0) {
+                lastSum = lastSum + array[i];
             } else {
-                list.add(list.get(i-1)+array[i]);
+                lastSum = array[i];
+            }
+            if(lastSum > maxSum) {
+                maxSum = lastSum;
             }
         }
-        Optional<Integer> op = list.stream().max(Integer::compareTo);
-        return op.isPresent() ? op.get() : null;
+        return maxSum;
     }
 
     public static void main(String[] args) {
