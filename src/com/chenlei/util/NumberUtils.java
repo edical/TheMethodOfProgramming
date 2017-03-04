@@ -68,6 +68,18 @@ public class NumberUtils {
         return val % 2 != 0;
     }
 
+    private static void reverseIntArray(int []arr, int first, int second) {
+        while (first < second) {
+            swapInt(arr, first++, second--);
+        }
+    }
+
+    public static void reverseNoChanged(int a[], int before, int middle, int after) {
+        NumberUtils.reverseIntArray(a, before, after);
+        NumberUtils.reverseIntArray(a, before, after - (middle - before));
+        NumberUtils.reverseIntArray(a, after - (middle - before) + 1, after);
+    }
+
     public static void main(String[] args) {
         System.out.println(min(3,5));
     }

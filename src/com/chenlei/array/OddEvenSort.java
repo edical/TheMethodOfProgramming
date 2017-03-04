@@ -38,8 +38,8 @@ public class OddEvenSort {
 
 
     public static void main(String[] args) {
-        int []array = {3, 2, 4, 5, 7,6};
-//        byMiddle(array);
+        int []array = {3, 2, 4, 5, 7, 6};
+        byMiddle(array);
         byLeft(array);
     }
 }
