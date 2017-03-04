@@ -7,7 +7,7 @@ package com.chenlei.array;
  */
 public class MaxSumOfContinueSubArray {
 
-    private static Integer maxSum(int array[]) {
+    public static Integer maxSum(int array[]) {
         Integer lastSum = array[0];
         Integer maxSum = array[0];
 
