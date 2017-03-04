@@ -13,7 +13,7 @@ import java.util.Map;
 public class Coin {
 
     //基本的剪枝搜索
-    public static int fBasic(int val, List<Integer> coins, int index) {
+    private static int fBasic(int val, List<Integer> coins, int index) {
         if (val == 0) {
             return 1;
         }
@@ -28,8 +28,8 @@ public class Coin {
         return count;
     }
 
-    //动态规划
-    public static int fDp(int val, List<Integer> coins) {
+    //动态规划(O(n^2))
+    private static int fDp(int val, List<Integer> coins) {
         Map<Integer, List<Integer>> map = new HashMap<>();
         for(int i = 0; i < coins.size(); i++) {
             map.put(i, new ArrayList<>());
