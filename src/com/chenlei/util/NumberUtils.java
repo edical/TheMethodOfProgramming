@@ -80,6 +80,16 @@ public class NumberUtils {
         NumberUtils.reverseIntArray(a, after - (middle - before) + 1, after);
     }
 
+    public static int ciFang(int num, int k) {
+        if(k == 0) {
+            return 1;
+        }
+        while(k-- > 1) {
+            num = num * num;
+        }
+        return num;
+    }
+
     public static void main(String[] args) {
         System.out.println(min(3,5));
     }
