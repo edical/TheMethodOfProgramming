@@ -3,6 +3,7 @@ package com.chenlei.array;
 import com.chenlei.util.NumberUtils;
 
 /**
+ *  2.9 完美洗牌算法
  * @author chenlei
  * @since 2017 - 03 - 06 21:15
  */
@@ -10,14 +11,6 @@ public class PerfectShuffle {
 
     //走环算法
     private static void doCircle(int a[], int k, int begin, int n) {
-//        int index = 1, num = a[begin];
-//        do {
-//            int temp = num;
-//            num = a[2*index%(2*n+1) - 1 + begin];
-//            a[2*index%(2*n+1) - 1 + begin] = temp;
-//            index = 2*index%(2*n+1) + begin;
-//        } while(index != 1);
-//        a[begin] = num;
         int index = begin, num = a[k + begin - 1];
         for(int nextIndex = 2*index%(2*n+1); nextIndex != begin; nextIndex = 2*index%(2*n+1)) {
             int temp = num;
@@ -46,7 +39,7 @@ public class PerfectShuffle {
             reserveLength -= 2*n;
             rangeIndex += 2*n;
         }
-        closeExchange(a);
+//        closeExchange(a);
     }
 
     private static void closeExchange(int a[]) {
