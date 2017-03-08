@@ -1,7 +1,7 @@
 package com.chenlei.array.practice;
 
 /**
- * n个整数中1出现的次数
+ * 4. n个整数中1出现的次数
  * @author chenlei
  * @since 2016 - 12 - 11 19:45
  */

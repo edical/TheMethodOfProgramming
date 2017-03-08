@@ -90,7 +90,17 @@ public class NumberUtils {
         return num;
     }
 
+    public static int getBitOne(int num) {
+        for(int i = 0; i < 32; i++) {
+            if(((1 << i) & num) != 0) {
+                return i + 1;
+            }
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
         System.out.println(min(3,5));
+        System.out.println(getBitOne(8));
     }
 }
