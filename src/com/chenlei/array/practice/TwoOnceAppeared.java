@@ -1,6 +1,8 @@
 package com.chenlei.array.practice;
 
 import com.chenlei.util.NumberUtils;
+import com.chenlei.util.tuple.Tuple;
+import com.chenlei.util.tuple.Tuple2;
 
 /**
  *  2. 两个只出现一次的数字
@@ -9,7 +11,7 @@ import com.chenlei.util.NumberUtils;
  */
 public class TwoOnceAppeared {
 
-    private static void twoOnce(int a[]) {
+    private static Tuple2<Integer, Integer> twoOnce(int a[]) {
         int xor = 0;
         for (int anA : a) {
             xor = xor ^ anA;
@@ -23,11 +25,12 @@ public class TwoOnceAppeared {
                 secondNum = secondNum ^ anA;
             }
         }
-        System.out.println("firstNum is " + firstNum + ", secondNum is " + secondNum);
+        return Tuple.of(firstNum, secondNum);
     }
 
     public static void main(String[] args) {
         int a[] = {1, 4, 8, 2, 3, 8, 4, 1};
-        twoOnce(a);
+        Tuple2<Integer, Integer> result = twoOnce(a);
+        System.out.println("firstNum is " + result._1().orElse(null) + ", secondNum is " + result._2().orElse(null));
     }
 }
