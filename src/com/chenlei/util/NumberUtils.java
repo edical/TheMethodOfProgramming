@@ -15,6 +15,28 @@ public class NumberUtils {
         ints[second] = temp;
     }
 
+    public static void swapIntByTwoArray(int a[], int b[], int index1, int index2) {
+        if(index1 < a.length) {
+            if(index2 < a.length) {
+                swapInt(a, index1, index2);
+            } else {
+                swapIntByTwoArrayEach(a, b, index1, index2 - a.length);
+            }
+        } else {
+            if(index2 < a.length) {
+                swapIntByTwoArrayEach(a, b, index2, index1 - a.length);
+            } else {
+                swapInt(b, index1 - a.length, index2 - a.length);
+            }
+        }
+    }
+
+    private static void swapIntByTwoArrayEach(int a[], int b[], int aIndex, int bIndex) {
+        int temp = a[aIndex];
+        a[aIndex] = b[bIndex];
+        b[bIndex] = temp;
+    }
+
     public static void swapInteger(Integer []array, int first, int second) {
         int temp = array[first];
         array[first] = array[second];
@@ -97,6 +119,14 @@ public class NumberUtils {
             }
         }
         return 0;
+    }
+
+    public static int abs(int a) {
+        if(a >= 0) {
+            return  a;
+        } else {
+            return -a;
+        }
     }
 
     public static void main(String[] args) {

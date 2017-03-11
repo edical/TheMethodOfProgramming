@@ -32,6 +32,31 @@ public class QuickSort {
         return second;
     }
 
+    public static int partitionByTwoArray(int a[], int b[], int start, int end) {
+        int first = start + 1, second = end;
+        while (true) {
+            while(first <= end && getRightValue(a, b, start) >= getRightValue(a, b, first)) first++;
+            while(first <= end && getRightValue(a, b, start) < getRightValue(a, b, second)) second--;
+            if(first > second) {
+                break;
+            }
+            NumberUtils.swapIntByTwoArray(a, b, first, second);
+            first++;
+            second--;
+        }
+        NumberUtils.swapIntByTwoArray(a, b, start, second);
+        return second;
+    }
+
+    private static int getRightValue(int a[], int b[], int index) {
+        if(index < a.length) {
+            return a[index];
+        } else {
+            return b[index - a.length];
+        }
+    }
+
+
     public static void main(String[] args) {
         int array[] = {3, 2, 5, 4, 7};
         quickSort(array, 0, array.length - 1);
