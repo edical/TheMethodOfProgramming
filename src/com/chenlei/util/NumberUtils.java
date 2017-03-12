@@ -129,6 +129,10 @@ public class NumberUtils {
         }
     }
 
+    public static int distance(int a, int b) {
+        return a >= b ? a - b : b - a;
+    }
+
     public static void main(String[] args) {
         System.out.println(min(3,5));
         System.out.println(getBitOne(8));
