@@ -5,7 +5,7 @@ import com.chenlei.util.tuple.Tuple;
 import com.chenlei.util.tuple.Tuple2;
 
 /**
- *  2. 两个只出现一次的数字
+ *  3. 两个只出现一次的数字
  * @author chenlei
  * @since 2017 - 03 - 08 20:31
  */
