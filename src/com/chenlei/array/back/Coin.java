@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class Coin {
 
-    //基本的剪枝搜索
+    //基本的剪枝搜索，类似于for循环
     private static int fBasic(int val, List<Integer> coins, int index) {
         if (val == 0) {
             return 1;

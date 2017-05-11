@@ -27,14 +27,14 @@ public class LS {
     }
 
     //最长递减子序列dp基本解法o(n^2)
-    private static List<Integer> ldsBasicDp(int a[]) {
+    static List<Integer> ldsBasicDp(int a[]) {
         List<Integer> lds = new ArrayList<>();
         lds.add(1);
         for(int i = a.length - 2; i >= 0; i--) {
             int max = 1;
             for(int j = a.length - 1; j > i; j--) {
                 if(a[i] > a[j]) {
-                    max = max > lds.get(a.length - j - 1) + 1 ? max : lds.get(a.length - j - 1) + 1;
+                    max = max > lds.get(j - i - 1) + 1 ? max : lds.get(j - i - 1) + 1;
                 }
             }
             lds.add(0, max);
@@ -43,7 +43,7 @@ public class LS {
     }
 
     //最长递增子序列二分解法
-    private static List<Integer> lisBinary(int a[]) {
+    static List<Integer> lisBinary(int a[]) {
         List<Integer> lis = new ArrayList<>();
         List<Integer> tempLis = new ArrayList<>();
         lis.add(1);
@@ -86,7 +86,7 @@ public class LS {
         int a[] = {2, 1, 5, 3, 6, 4, 8, 9, 7};
         System.out.println(lisBasicDp(a));
         System.out.println(lisBinary(a));
-        int b[] = {9, 4, 3, 2, 5, 4, 3, 2};
-        System.out.println(ldsBasicDp(b));
+//        int b[] = {9, 4, 3, 2, 5, 4, 3, 2};
+        System.out.println(ldsBasicDp(a));
     }
 }
