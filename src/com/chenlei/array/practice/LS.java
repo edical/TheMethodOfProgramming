@@ -42,7 +42,7 @@ public class LS {
         return lds;
     }
 
-    //最长递增子序列二分解法
+    //最长递增子序列二分解法，时间O(nlogn)
     static List<Integer> lisBinary(int a[]) {
         List<Integer> lis = new ArrayList<>();
         List<Integer> tempLis = new ArrayList<>();
