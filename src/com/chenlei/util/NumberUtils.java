@@ -9,6 +9,10 @@ public class NumberUtils {
         return a.compareTo(b) < 0 ? a : b;
     }
 
+    public static <T extends  Comparable<T>>  T  max(T a, T b) {
+        return a.compareTo(b) > 0 ? a : b;
+    }
+
     public static void swapInt(int []ints, int first, int second) {
         int temp = ints[first];
         ints[first] = ints[second];
