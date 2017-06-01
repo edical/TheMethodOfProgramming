@@ -1,4 +1,4 @@
-package com.chenlei.Tree;
+package com.chenlei.tree;
 
 import java.util.ArrayList;
 import java.util.List;

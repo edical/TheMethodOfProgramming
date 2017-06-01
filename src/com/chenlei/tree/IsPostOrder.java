@@ -1,4 +1,4 @@
-package com.chenlei.Tree;
+package com.chenlei.tree;
 
 /**
  *  3. 判断某个序列是否是二叉查找树的后序遍历结果
