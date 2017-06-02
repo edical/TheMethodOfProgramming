@@ -24,19 +24,18 @@ class BSTNode {
         BSTNode node5 = new BSTNode(8);
         BSTNode node6 = new BSTNode(12);
         BSTNode node7 = new BSTNode(16);
-        BSTNode node8 = new BSTNode(15);
         node1.initLink(node2, node3);
         node2.initLink(node4, node5);
         node3.initLink(node6, node7);
         node4.initLink(null, null);
         node5.initLink(null, null);
         node6.initLink(null, null);
-        node7.initLink(node8, null);
+        node7.initLink(null, null);
         return node1;
     }
 
     int value;
     BSTNode leftChild;
     BSTNode rightChild;
-
+    BSTNode pNext;
 }
