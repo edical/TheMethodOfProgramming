@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  4 字符串的查找
+ *  字符串的查找(kmp)
  * @author chenlei
  * @since 2017 - 02 - 25 12:38
  */
