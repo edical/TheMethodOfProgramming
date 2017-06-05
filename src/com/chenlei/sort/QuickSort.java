@@ -2,6 +2,8 @@ package com.chenlei.sort;
 
 import com.chenlei.util.NumberUtils;
 
+import static com.chenlei.util.NumberUtils.swapInt;
+
 /**
  * @author chenlei
  * @since 2016 - 11 - 17 19:55
@@ -24,11 +26,11 @@ public class QuickSort {
             if(first > second) {
                 break;
             }
-            NumberUtils.swapInt(array, first, second);
+            swapInt(array, first, second);
             first++;
             second--;
         }
-        NumberUtils.swapInt(array, start, second);
+        swapInt(array, start, second);
         return second;
     }
 
@@ -40,11 +42,11 @@ public class QuickSort {
             if(first > second) {
                 break;
             }
-            NumberUtils.swapIntByTwoArray(a, b, first, second);
+            swapIntByTwoArray(a, b, first, second);
             first++;
             second--;
         }
-        NumberUtils.swapIntByTwoArray(a, b, start, second);
+        swapIntByTwoArray(a, b, start, second);
         return second;
     }
 
@@ -56,6 +58,27 @@ public class QuickSort {
         }
     }
 
+    private static void swapIntByTwoArray(int a[], int b[], int index1, int index2) {
+        if(index1 < a.length) {
+            if(index2 < a.length) {
+                swapInt(a, index1, index2);
+            } else {
+                swapIntByTwoArrayEach(a, b, index1, index2 - a.length);
+            }
+        } else {
+            if(index2 < a.length) {
+                swapIntByTwoArrayEach(a, b, index2, index1 - a.length);
+            } else {
+                swapInt(b, index1 - a.length, index2 - a.length);
+            }
+        }
+    }
+
+    private static void swapIntByTwoArrayEach(int a[], int b[], int aIndex, int bIndex) {
+        int temp = a[aIndex];
+        a[aIndex] = b[bIndex];
+        b[bIndex] = temp;
+    }
 
     public static void main(String[] args) {
         int array[] = {3, 2, 5, 4, 7};

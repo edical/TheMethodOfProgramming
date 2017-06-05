@@ -1,7 +1,7 @@
 package com.chenlei.find;
 
 /**
- * 二分查找
+ * 1. 二分查找
  * @author chenlei
  * @since 2017 - 06 - 04 15:17
  */
