@@ -10,7 +10,8 @@ import java.util.Map;
  */
 public class SubSeqCount {
 
-    //dp[i] = sum[a[i]] + 2 * sum[not a[i]] = 2*d[i-1] - sum[a[i]]
+    //dp[i] = 2*dp[i-1] - sum[a[i]]
+    //dp[i] = dp[i-1]的子序列加a[i]或者不加a[i], 其中dp[i-1]子序列中不以a[i]结尾的子序列中会有一部分与a[i]值结尾的子序列数量相等，当新添a[i]时，这部分会重合
     private static int getSubSeqCount(int a[]) {
         Map<Integer, Integer> sum = new HashMap<>();
         int nowCount = 1;
