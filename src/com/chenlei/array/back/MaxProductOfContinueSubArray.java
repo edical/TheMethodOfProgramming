@@ -1,6 +1,6 @@
 package com.chenlei.array.back;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  2.4.4 连续子数组的最大乘积

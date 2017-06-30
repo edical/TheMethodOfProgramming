@@ -1,8 +1,8 @@
 package com.chenlei.tree;
 
-import com.chenlei.util.NumberUtils;
-import com.chenlei.util.tuple.Tuple;
-import com.chenlei.util.tuple.Tuple2;
+import util.NumberUtils;
+import util.tuple.Tuple;
+import util.tuple.Tuple2;
 
 /**
  *  4. 求二叉树中结点的最大距离

@@ -1,8 +1,8 @@
 package com.chenlei.array.practice;
 
-import com.chenlei.util.NumberUtils;
-import com.chenlei.util.tuple.Tuple;
-import com.chenlei.util.tuple.Tuple3;
+import util.NumberUtils;
+import util.tuple.Tuple;
+import util.tuple.Tuple3;
 
 /**
  *  2. 三个只出现一次的数

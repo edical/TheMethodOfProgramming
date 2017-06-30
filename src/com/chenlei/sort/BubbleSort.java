@@ -1,6 +1,6 @@
 package com.chenlei.sort;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  * 冒泡排序

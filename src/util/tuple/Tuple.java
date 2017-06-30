@@ -1,4 +1,4 @@
-package com.chenlei.util.tuple;
+package util.tuple;
 
 import java.util.Optional;
 

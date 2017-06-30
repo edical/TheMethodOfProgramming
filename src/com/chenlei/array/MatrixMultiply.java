@@ -1,6 +1,6 @@
 package com.chenlei.array;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  2.8 矩阵乘法

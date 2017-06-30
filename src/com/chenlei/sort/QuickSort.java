@@ -1,8 +1,8 @@
 package com.chenlei.sort;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
-import static com.chenlei.util.NumberUtils.swapInt;
+import static util.NumberUtils.swapInt;
 
 /**
  * @author chenlei

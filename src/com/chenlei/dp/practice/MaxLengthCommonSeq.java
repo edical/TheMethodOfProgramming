@@ -1,6 +1,6 @@
 package com.chenlei.dp.practice;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 import java.util.ArrayList;
 import java.util.List;

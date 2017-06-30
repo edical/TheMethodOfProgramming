@@ -1,9 +1,9 @@
 package com.chenlei.string.back;
 
 import com.chenlei.string.MaxPalindrome;
-import com.chenlei.util.StringUtils;
-import com.chenlei.util.tuple.Tuple;
-import com.chenlei.util.tuple.Tuple2;
+import util.StringUtils;
+import util.tuple.Tuple;
+import util.tuple.Tuple2;
 
 import java.util.ArrayList;
 import java.util.List;

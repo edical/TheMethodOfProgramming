@@ -1,7 +1,7 @@
 package com.chenlei.string;
 
-import com.chenlei.util.NumberUtils;
-import com.chenlei.util.StringUtils;
+import util.NumberUtils;
+import util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;

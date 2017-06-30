@@ -1,6 +1,6 @@
 package com.chenlei.array.practice;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  * 43. 逆序对的数量

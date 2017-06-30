@@ -1,6 +1,6 @@
 package com.chenlei.array.practice;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  26. 把数组排成最小的数

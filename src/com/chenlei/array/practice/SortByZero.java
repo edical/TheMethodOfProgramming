@@ -1,6 +1,6 @@
 package com.chenlei.array.practice;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  * 45. 只能进行0与其他数的交换操作的排序

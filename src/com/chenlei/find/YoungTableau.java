@@ -1,6 +1,6 @@
 package com.chenlei.find;
 
-import com.chenlei.util.CollectionUtils;
+import util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.chenlei.array.practice;
 
 import com.chenlei.sort.QuickSort;
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 import java.util.HashMap;
 import java.util.Map;

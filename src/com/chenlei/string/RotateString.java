@@ -1,6 +1,6 @@
 package com.chenlei.string;
 
-import com.chenlei.util.StringUtils;
+import util.StringUtils;
 
 /**
  * 1.1 字符串的旋转

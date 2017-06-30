@@ -1,6 +1,6 @@
 package com.chenlei.array.practice;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  18. 数组中的最小绝对值

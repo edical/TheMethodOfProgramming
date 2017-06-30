@@ -1,6 +1,6 @@
 package com.chenlei.array.practice;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  27. 旋转数组的最小元素

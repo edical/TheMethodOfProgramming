@@ -1,6 +1,6 @@
 package com.chenlei.array.back;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  2.6.1 正负数重新排序(不改变相对顺序)

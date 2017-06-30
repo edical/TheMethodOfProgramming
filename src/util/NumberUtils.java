@@ -1,4 +1,4 @@
-package com.chenlei.util;
+package util;
 
 /**
  * @author chenlei

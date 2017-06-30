@@ -1,6 +1,6 @@
 package com.chenlei.string;
 
-import com.chenlei.util.StringUtils;
+import util.StringUtils;
 
 import java.util.Arrays;
 

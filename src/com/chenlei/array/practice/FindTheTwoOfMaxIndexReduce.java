@@ -1,7 +1,7 @@
 package com.chenlei.array.practice;
 
 import com.chenlei.sort.QuickSort;
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  16.寻找下标差值最大的两个数

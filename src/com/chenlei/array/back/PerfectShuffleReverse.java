@@ -1,6 +1,6 @@
 package com.chenlei.array.back;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  2.9.1 完美洗牌逆运算

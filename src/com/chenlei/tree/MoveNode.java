@@ -1,6 +1,6 @@
 package com.chenlei.tree;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  * 6. 树结点的移动

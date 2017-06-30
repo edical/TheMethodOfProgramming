@@ -1,6 +1,6 @@
 package com.chenlei.array;
 
-import com.chenlei.util.NumberUtils;
+import util.NumberUtils;
 
 /**
  *  2.7 荷兰国旗

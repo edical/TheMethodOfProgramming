@@ -1,6 +1,6 @@
 package com.chenlei.string.back;
 
-import com.chenlei.util.StringUtils;
+import util.StringUtils;
 
 /**
  *  1.1 单词反转

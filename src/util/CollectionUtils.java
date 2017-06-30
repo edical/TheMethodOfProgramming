@@ -1,4 +1,4 @@
-package com.chenlei.util;
+package util;
 
 import java.util.ArrayList;
 import java.util.Collections;
