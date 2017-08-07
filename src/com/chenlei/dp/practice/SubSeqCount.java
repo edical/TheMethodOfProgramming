@@ -1,6 +1,8 @@
 package com.chenlei.dp.practice;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,19 +12,21 @@ import java.util.Map;
  */
 public class SubSeqCount {
 
-    //dp[i] = 2*dp[i-1] - sum[a[i]]
-    //dp[i] = dp[i-1]的子序列加a[i]或者不加a[i], 其中dp[i-1]子序列中不以a[i]结尾的子序列中会有一部分与a[i]值结尾的子序列数量相等，当新添a[i]时，这部分会重合
+    //dp[k]=2*dp[k-1]+1;如果a[k]与前k-1个字符都不相同
+    //dp[k]=2*dp[k-1]-dp[t-1],如果a[k]与前k-1个字符有相同的，t是与之相同的最近的一个下标
     private static int getSubSeqCount(int a[]) {
-        Map<Integer, Integer> sum = new HashMap<>();
-        int nowCount = 1;
-        sum.put(a[0], 1);
+        Map<Integer, Integer> index = new HashMap<>();
+        index.put(a[0], 0);
+        List<Integer> dp = new ArrayList<>();
         for(int i = 1; i < a.length; i++) {
-            sum.putIfAbsent(a[i], 0);
-            int temp = nowCount;
-            nowCount = 2 * nowCount - sum.get(a[i]);
-            sum.put(a[i], temp);
+            if(!index.containsKey(a[i])) {
+                dp.add(2*dp.get(dp.size() - 1) + 1);
+            } else {
+                dp.add(2*dp.get(dp.size() - 1) - dp.get(index.get(a[i])));
+            }
+            index.put(a[i], i);
         }
-        return nowCount;
+        return dp.get(dp.size() - 1);
     }
 
     public static void main(String[] args) {

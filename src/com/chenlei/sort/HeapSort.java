@@ -9,6 +9,7 @@ import util.NumberUtils;
 public class HeapSort {
 
     public static void initHeap(Integer array[]) {
+        //初始化从非叶子节点开始
         for(int i = (array.length - 2) / 2; i >= 0; i--) {
             sickDown(array, i, array.length - 1);
         }
