@@ -21,8 +21,12 @@ public class QuickSort {
     public static int partition(int []array, int start, int end) {
         int first = start + 1, second = end;
         while(true) {
-            while(first <= end && array[start] >= array[first]) first++;
-            while (first <= end && array[start] < array[second]) second--;
+            while(first <= end && array[start] >= array[first]) {
+                first++;
+            }
+            while (first <= end && array[start] < array[second]) {
+                second--;
+            }
             if(first > second) {
                 break;
             }
@@ -34,11 +38,15 @@ public class QuickSort {
         return second;
     }
 
-    public static int partitionByTwoArray(int a[], int b[], int start, int end) {
+    public static int partitionByTwoArray(int[] a, int[] b, int start, int end) {
         int first = start + 1, second = end;
         while (true) {
-            while(first <= end && getRightValue(a, b, start) >= getRightValue(a, b, first)) first++;
-            while(first <= end && getRightValue(a, b, start) < getRightValue(a, b, second)) second--;
+            while(first <= end && getRightValue(a, b, start) >= getRightValue(a, b, first)) {
+                first++;
+            }
+            while(first <= end && getRightValue(a, b, start) < getRightValue(a, b, second)) {
+                second--;
+            }
             if(first > second) {
                 break;
             }
@@ -50,7 +58,7 @@ public class QuickSort {
         return second;
     }
 
-    private static int getRightValue(int a[], int b[], int index) {
+    private static int getRightValue(int[] a, int[] b, int index) {
         if(index < a.length) {
             return a[index];
         } else {
@@ -58,7 +66,7 @@ public class QuickSort {
         }
     }
 
-    private static void swapIntByTwoArray(int a[], int b[], int index1, int index2) {
+    private static void swapIntByTwoArray(int[] a, int[] b, int index1, int index2) {
         if(index1 < a.length) {
             if(index2 < a.length) {
                 swapInt(a, index1, index2);
@@ -74,14 +82,14 @@ public class QuickSort {
         }
     }
 
-    private static void swapIntByTwoArrayEach(int a[], int b[], int aIndex, int bIndex) {
+    private static void swapIntByTwoArrayEach(int[] a, int[] b, int aIndex, int bIndex) {
         int temp = a[aIndex];
         a[aIndex] = b[bIndex];
         b[bIndex] = temp;
     }
 
     public static void main(String[] args) {
-        int array[] = {3, 2, 5, 4, 7};
+        int[] array = {3, 2, 5, 4, 7};
         quickSort(array, 0, array.length - 1);
         NumberUtils.printInArray(array);
     }

@@ -9,17 +9,27 @@ import util.NumberUtils;
  */
 public class PosiNegaResort {
 
-    private static void resort(int a[]) {
+    private static void resort(int[] a) {
         int nega = 0, posi = 0;
         int negaEnd;
         while (posi < a.length && nega < a.length) {
-            while(posi < a.length && a[posi] < 0) posi++;
-            if(posi >= a.length) break;
+            while(posi < a.length && a[posi] < 0) {
+                posi++;
+            }
+            if(posi >= a.length) {
+                break;
+            }
             nega = posi + 1;
-            while(nega < a.length && a[nega] > 0) nega++;
-            if(nega >= a.length) break;
+            while(nega < a.length && a[nega] >= 0) {
+                nega++;
+            }
+            if(nega >= a.length) {
+                break;
+            }
             negaEnd = nega + 1;
-            while(negaEnd < a.length && a[negaEnd] < 0) negaEnd++;
+            while(negaEnd < a.length && a[negaEnd] < 0) {
+                negaEnd++;
+            }
             NumberUtils.reverseNoChanged(a, posi, nega, negaEnd - 1);
             posi = negaEnd - (nega - posi);
         }
@@ -27,7 +37,7 @@ public class PosiNegaResort {
 
 
     public static void main(String[] args) {
-        int a[] = {1, 7, -5, 9, -12, 15};
+        int []a = {1, 7, -5, 9, -12, 15};
         resort(a);
         NumberUtils.printInArray(a);
     }

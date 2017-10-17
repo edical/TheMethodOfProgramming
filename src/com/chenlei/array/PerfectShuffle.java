@@ -9,8 +9,10 @@ import util.NumberUtils;
  */
 public class PerfectShuffle {
 
-    //走环算法
-    private static void doCircle(int a[], int k, int begin, int n) {
+    /**
+     * 走环算法
+     */
+    private static void doCircle(int []a, int k, int begin, int n) {
         int index = begin, num = a[k + begin - 1];
         for(int nextIndex = 2*index%(2*n+1); nextIndex != begin; nextIndex = 2*index%(2*n+1)) {
             int temp = num;
@@ -21,8 +23,10 @@ public class PerfectShuffle {
         a[k + begin - 1] = num;
     }
 
-    //完美洗牌
-    private static void perfectShuffle(int a[]) {
+    /**
+     * 完美洗牌
+     */
+    private static void perfectShuffle(int[] a) {
         int reserveLength = a.length;
         int rangeIndex = 0;
         while (reserveLength > 0) {
@@ -39,17 +43,10 @@ public class PerfectShuffle {
             reserveLength -= 2*n;
             rangeIndex += 2*n;
         }
-//        closeExchange(a);
-    }
-
-    private static void closeExchange(int a[]) {
-        for(int i = 0; i < a.length; i += 2) {
-            NumberUtils.swapInt(a, i, i+1);
-        }
     }
 
     public static void main(String[] args) {
-        int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int []a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         perfectShuffle(a);
 //        doCircle(a, 0, 1, 4);
         NumberUtils.printInArray(a);

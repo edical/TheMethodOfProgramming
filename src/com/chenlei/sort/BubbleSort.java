@@ -9,7 +9,7 @@ import util.NumberUtils;
  */
 public class BubbleSort {
 
-    public static void bubbleSort(Integer[] array) {
+    private static void bubbleSort(Integer[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             boolean changed = false;
             for (int j = array.length - 1; j > i; j--) {
@@ -25,7 +25,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        Integer array[] = {3, 2, 5, 4, 7};
+        Integer[] array = {3, 2, 5, 4, 7};
         bubbleSort(array);
         NumberUtils.printArray(array);
     }

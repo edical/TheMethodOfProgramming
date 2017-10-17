@@ -8,7 +8,7 @@ import util.NumberUtils;
  */
 public class InsertSort {
 
-    public static void insertSort(Integer array[]) {
+    private static void insertSort(Integer[] array) {
         for(int i = 1; i < array.length; i++) {
             int target = array[i];
             int j = i - 1;
@@ -24,7 +24,7 @@ public class InsertSort {
     }
 
     public static void main(String[] args) {
-        Integer array[] = {3, 2, 5, 4, 7};
+        Integer[] array = {3, 2, 5, 4, 7};
         insertSort(array);
         NumberUtils.printArray(array);
     }

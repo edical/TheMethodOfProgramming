@@ -8,7 +8,7 @@ import util.NumberUtils;
  */
 public class SelectSort {
 
-    public static void selectSort(Integer []array) {
+    private static void selectSort(Integer []array) {
         for(int i = 0; i < array.length - 1; i++) {
             int minIndex = i;
             for(int j = i + 1; j < array.length; j++) {
@@ -21,7 +21,7 @@ public class SelectSort {
     }
 
     public static void main(String[] args) {
-        Integer array[] = {3, 2, 5, 4, 7};
+        Integer[] array = {3, 2, 5, 4, 7};
         selectSort(array);
         NumberUtils.printArray(array);
     }

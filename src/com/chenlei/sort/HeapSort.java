@@ -8,22 +8,24 @@ import util.NumberUtils;
  */
 public class HeapSort {
 
-    public static void initHeap(Integer array[]) {
+    private static void initHeap(Integer[] array) {
         //初始化从非叶子节点开始
         for(int i = (array.length - 2) / 2; i >= 0; i--) {
             sickDown(array, i, array.length - 1);
         }
     }
 
-    public static void heapSort(Integer array[]) {
+    private static void heapSort(Integer[] array) {
         for(int i = array.length - 1; i >= 0; i--) {
             NumberUtils.swapInteger(array, 0, i);
             sickDown(array, 0, i);
         }
     }
 
-    //第q个结点向下沉
-    public static void sickDown(Integer array[], int q, int p) {
+    /**
+     * 第q个结点向下沉
+     */
+    private static void sickDown(Integer[] array, int q, int p) {
         int leftChild = 2 * q + 1;
         while(leftChild < p) {
             //q有左子结点
@@ -45,7 +47,7 @@ public class HeapSort {
 
 
     public static void main(String[] args) {
-        Integer array[] = {3, 2, 5, 4, 7};
+        Integer[] array = {3, 2, 5, 4, 7};
         initHeap(array);
         heapSort(array);
         NumberUtils.printArray(array);

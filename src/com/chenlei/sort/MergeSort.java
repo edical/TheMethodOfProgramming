@@ -8,7 +8,7 @@ import util.NumberUtils;
  */
 public class MergeSort {
 
-    public static void mergeSort(Integer []array, int before, int end, int []temp) {
+    private static void mergeSort(Integer []array, int before, int end, int []temp) {
         if(before < end) {
             int middle = (before + end) / 2;
             mergeSort(array, before, middle, temp);
@@ -17,7 +17,7 @@ public class MergeSort {
         }
     }
 
-    public static void merge(Integer []array, int before, int end, int []temp) {
+    private static void merge(Integer []array, int before, int end, int []temp) {
         int middle = (before + end) / 2;
         int first = before, second = middle + 1;
         int tempIndex = before;
@@ -41,8 +41,8 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        Integer array[] = {3, 2, 5, 4, 7};
-        int temp[] = {0, 0, 0, 0, 0};
+        Integer[] array = {3, 2, 5, 4, 7};
+        int[] temp = {0, 0, 0, 0, 0};
         mergeSort(array, 0, 4, temp);
         NumberUtils.printArray(array);
     }

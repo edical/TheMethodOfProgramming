@@ -9,7 +9,7 @@ import util.NumberUtils;
  */
 public class HollandFlag {
 
-    private static void improve(int arr[]) {
+    private static void improve(int[] arr) {
         int left = 0, current = 0, right = arr.length - 1;
         while(current <= right) {
             if(arr[current] == 0) {
@@ -27,9 +27,9 @@ public class HollandFlag {
     }
 
     public static void main(String[] args) {
-        int array1[] = {2, 0, 1, 0, 0, 2, 1, 1, 2};
+        int[] array1 = {2, 0, 1, 0, 0, 2, 1, 1, 2};
         improve(array1);
-        int array2[] = {0, 1, 2, 1, 1, 2, 0, 2, 1, 0};
+        int[] array2 = {0, 1, 2, 1, 1, 2, 0, 2, 1, 0};
         improve(array2);
     }
 }

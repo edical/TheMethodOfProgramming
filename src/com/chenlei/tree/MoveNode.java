@@ -11,7 +11,9 @@ public class MoveNode {
 
     private static int steps = 0;
 
-    //将所有子树的多余石头或者亏欠都移动到tree的根节点。return值为根节点多余或亏欠的值
+    /**
+     * 将所有子树的多余石头或者亏欠都移动到tree的根节点。return值为根节点多余或亏欠的值
+     */
     private static int moveNode(BSTNode tree) {
         if(tree == null) {
             return 0;
