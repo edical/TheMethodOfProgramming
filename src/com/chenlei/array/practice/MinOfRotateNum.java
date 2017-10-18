@@ -38,7 +38,7 @@ public class MinOfRotateNum {
     }
 
     public static void main(String[] args) {
-        int a[] = {1, 1, 1, 0, 0, 1};
+        int[] a = {1, 1, 1, 0, 0, 1};
         System.out.println(minOfRotateNum(a, 0, a.length - 1));
     }
 }

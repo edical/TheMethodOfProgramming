@@ -10,8 +10,10 @@ import java.util.List;
  */
 public class MaxReduceOfCloseNum {
 
-    //桶方法
-    private static double maxReduce(double a[]) {
+    /**
+     * 桶方法
+     */
+    private static double maxReduce(double[] a) {
         List<Bucket> buckets =  initBuckets(a);
         Double max = Double.MIN_VALUE, min = Double.MAX_VALUE;
         for(double num : a) {
@@ -52,17 +54,19 @@ public class MaxReduceOfCloseNum {
 
     public static void main(String[] args) {
 //        double a[] = {3, 4.3, 5.7, 7};
-        double a[] = {3, 1, 2, 4, 9, 8 ,7};
+        double[] a = {3, 1, 2, 4, 9, 8 ,7};
         System.out.println(maxReduce(a));
     }
 
-    //求num应该在
-    private static int getBucketIndex(double a[], double min, double max, double num) {
+    /**
+     * 求num应该在
+     */
+    private static int getBucketIndex(double[] a, double min, double max, double num) {
         double instance =  (num - min) / (max - min) * a.length;
         return (int) instance;
     }
 
-    private static List<Bucket> initBuckets(double a[]) {
+    private static List<Bucket> initBuckets(double[] a) {
         List<Bucket> buckets = new ArrayList<>();
         for (double ignored : a) {
             buckets.add(new Bucket());

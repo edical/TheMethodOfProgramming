@@ -18,7 +18,8 @@ public class MaxPalindrome {
             return 0;
         }
         int maxLength = 0;
-        for(int i = 1; i < str.length() - 1; i++) {    //中心位置的前后必须有值
+        for(int i = 1; i < str.length() - 1; i++) {
+            //中心位置的前后必须有值
             int oddLength = palindromeLength(str, i - 1,  i + 1);
             if(oddLength != 0) {
                 oddLength = oddLength * 2 + 1;
@@ -104,7 +105,8 @@ public class MaxPalindrome {
     public static void main(String[] args) {
         System.out.println( maxPalindromeLength("abcde") );
         System.out.println( maxPalindromeLength("abcbae") );
-        System.out.println(manacher("abcde")); //将自身单个字符算1
+        //将自身单个字符算1
+        System.out.println(manacher("abcde"));
         System.out.println(manacher("abcbae"));
     }
 }

@@ -26,16 +26,18 @@ public class MinimumSubstring {
                 }
                 if(targetMap.containsKey(source[before])) {
                     sourceMap.put(source[before], sourceMap.get(source[before]) - 1);
-                    if (sourceMap.get(source[before]) < targetMap.get(source[before]))
+                    if (sourceMap.get(source[before]) < targetMap.get(source[before])) {
                         found--;
+                    }
                 }
                 before++;
             } else {
                 after++;
                 if(after < source.length) {
                     if(targetMap.containsKey(source[after])) {
-                        if (sourceMap.get(source[after]) < targetMap.get(source[after]))
+                        if (sourceMap.get(source[after]) < targetMap.get(source[after])) {
                             found++;
+                        }
                         sourceMap.put(source[after], sourceMap.get(source[after]) + 1);
                     }
                 } else {

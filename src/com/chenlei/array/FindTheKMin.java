@@ -7,9 +7,9 @@ import com.chenlei.sort.QuickSort;
  * @author chenlei
  * @since 2016 - 09 - 11 17:30
  */
-public class FindTheKMIN {
+public class FindTheKMin {
 
-    private static int findK(int a[], int low, int high, int k) {
+    private static int findK(int []a, int low, int high, int k) {
         int index = QuickSort.partition(a, low, high);
         if(k == (index - low + 1)) {
             return a[index];
@@ -21,12 +21,12 @@ public class FindTheKMIN {
         }
     }
 
-    private static int findK(int a[], int k) {
+    private static int findK(int []a, int k) {
         return findK(a, 0, a.length - 1, k);
     }
 
     public static void main(String[] args) {
-        int a[] = {3,6,2,1,5,7};
+        int[] a = {3,6,2,1,5,7};
         System.out.println(findK(a,2));
     }
 }

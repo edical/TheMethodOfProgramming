@@ -7,7 +7,7 @@ package com.chenlei.string;
 public class StringContain {
 
     private static boolean stringContainByHash(String a, String b) {
-        boolean array[] = new boolean[26];
+        boolean[] array = new boolean[26];
         for(char c : a.toCharArray()) {
             array[c - 'A'] = true;
         }

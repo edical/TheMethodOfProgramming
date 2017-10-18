@@ -13,8 +13,9 @@ public class FindTheSumOfMany {
     private static void findTheSumOfMany(int n, int target, int i, List<Integer> list) {
         if(i > n) {
             int sum = 0;
-            for(Integer j : list)
+            for(Integer j : list) {
                 sum += j;
+            }
             if(sum == target) {
                 System.out.println(list);
             }

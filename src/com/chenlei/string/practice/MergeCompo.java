@@ -40,7 +40,9 @@ public class MergeCompo {
         System.out.println(map1);
     }
 
-    //求key所在的组号
+    /**
+     * 求key所在的组号
+     */
     private static String find(Map<String, String> map, String key) {
         while(!Objects.equals(key, map.get(key))) {
             map.put(key, map.get(map.get(key)));
