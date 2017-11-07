@@ -5,6 +5,7 @@ package util;
  * @since  2016 - 09 - 04 10:55
  */
 public class StringUtils {
+
     public static boolean isBlank(String string) {
         if(string == null) {
             return true;
@@ -28,4 +29,12 @@ public class StringUtils {
             swapChar(chars, first++, second--);
         }
     }
+
+    public static void printStrToHex(String s) {
+        for (char c : s.toCharArray()) {
+            System.out.print(Integer.toHexString(c));
+        }
+        System.out.println();
+    }
+
 }
