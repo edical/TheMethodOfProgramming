@@ -11,10 +11,15 @@ public class StringUtils {
             return true;
         }
         for(int i = 0; i < string.length(); i++) {
-            if(string.charAt(i) != ' ')
+            if(string.charAt(i) != ' ') {
                 return false;
+            }
         }
         return true;
+    }
+
+    public static boolean isNotBlank(String string) {
+        return !isBlank(string);
     }
 
     public static void swapChar(char []chars, int first, int second) {
